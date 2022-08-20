@@ -31,7 +31,9 @@ const RulesPage: NextPage<Props> = ({
         {rules.map((rule) => (
           <li key={rule.id}>
             <Link href={`/rules/${rule.id}/`}>
-              {rule.name}
+              <a>
+                {rule.name}
+              </a>
             </Link>
           </li>
         ))}
