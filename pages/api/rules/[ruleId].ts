@@ -12,7 +12,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const { rawRuleId } = req.query
+  const { ruleId: rawRuleId } = req.query
   assert(rawRuleId !== undefined)
 
   const ruleId = Array.isArray(rawRuleId) ? rawRuleId[0] : rawRuleId
