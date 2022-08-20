@@ -2,6 +2,7 @@ import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { loadRules, Rule } from '../lib/rules'
+import Link from 'next/link'
 
 interface Props {
   rules: Rule[]
@@ -29,9 +30,9 @@ const RulesPage: NextPage<Props> = ({
         <ul>
         {rules.map((rule) => (
           <li key={rule.id}>
-            <a href={`/rules/${rule.id}`}>
+            <Link href={`/rules/${rule.id}/`}>
               {rule.name}
-            </a>
+            </Link>
           </li>
         ))}
         </ul>
