@@ -2,7 +2,7 @@
 import path from 'path'
 import fs from 'fs'
 import yaml from 'js-yaml'
-import { array, Decoder, number, object, string } from '@mojotech/json-type-validation'
+import { array, constant, Decoder, number, object, optional, string, union } from '@mojotech/json-type-validation'
 
 export interface Rule {
   id: string
@@ -10,6 +10,11 @@ export interface Rule {
   recommendedParticipants: number
   createdAt: string
   updatedAt: string
+  versions: {
+    amongUs: string
+    extremeRoles: string | undefined | null
+    submerged: string | undefined | null
+  }
   imageUrls: string[]
 }
 
@@ -17,6 +22,11 @@ const ruleDecoder: Decoder<Rule> = object({
   id: string(),
   name: string(),
   recommendedParticipants: number(),
+  versions: object({
+    amongUs: string(),
+    extremeRoles: optional(union(string(), constant(null))),
+    submerged: optional(union(string(), constant(null)))
+  }),
   createdAt: string(),
   updatedAt: string(),
   imageUrls: array(string())
