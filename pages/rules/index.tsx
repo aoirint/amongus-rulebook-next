@@ -6,7 +6,7 @@ const RulesPage: NextPage = () => {
   const router = useRouter()
 
   useEffect(() => {
-    router.push('/')
+    router.replace('/')
   })
 
   return (
