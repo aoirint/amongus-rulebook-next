@@ -1,19 +1,18 @@
-import { GetStaticProps, NextPage } from "next"
+import { NextPage } from "next"
+import { useRouter } from "next/router"
+import { useEffect } from "react"
 
 const RulesPage: NextPage = () => {
+  const router = useRouter()
+
+  useEffect(() => {
+    router.push('/')
+  })
+
   return (
     <>
     </>
   )
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    redirect: {
-      permanent: false,
-      destination: '/'
-    }
-  }
 }
 
 export default RulesPage
