@@ -53,7 +53,7 @@ const RulePage: NextPage<Props> = ({
         </ul>
         <p>
           {rule.imageUrls.map((imageUrl, index) => (
-            <Image src={imageUrl} width="640px" height="360px" key={index} />
+            <img src={imageUrl} width="640px" height="360px" key={index} alt={`${index}`} />
           ))}
         </p>
       </main>
