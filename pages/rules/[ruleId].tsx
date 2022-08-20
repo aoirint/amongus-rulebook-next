@@ -40,7 +40,7 @@ const RulePage: NextPage<Props> = ({
           {rule.versions.extremeRoles ? (
             <li>
               Extreme Roles:{' '}
-              <a href={`https://github.com/yukieiji/ExtremeRoles/releases/tag/${rule.versions.extremeRoles}`}>
+              <a href={`https://github.com/yukieiji/ExtremeRoles/releases/tag/v${rule.versions.extremeRoles}`}>
                 {rule.versions.extremeRoles}
               </a>
             </li>

@@ -1,6 +1,10 @@
+id: 'myRuleId'
 name: 'hoge'
 recommendedParticipants: 15
 createdAt: '2022-08-20T09:00:00+09:00'
 updatedAt: '2022-08-20T09:00:00+09:00'
+versions:
+  amongUs: '2022.7.12'
+  extremeRoles: '3.2.1.2'
 imageUrls:
   - '/contents/images/myRuleId/1.png'
